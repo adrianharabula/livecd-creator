@@ -11,4 +11,4 @@ RUN mkdir /ks
 WORKDIR /ks
 
 ## Set ENTRYPOINT
-ENTRYPOINT exec /usr/bin/livecd-creator --config=${KS_FILE:=custom.ks} --releasever=${RELEASEVER:=28} --cache=${CACHEDIR:=/var/cache/live} --tmpdir=${TMPDIR:=/var/tmp}
+ENTRYPOINT ["/usr/bin/livecd-creator"]
